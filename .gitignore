@@ -1,0 +1,7 @@
+.idea/
+target/
+localizations/
+
+*.iml
+*.json
+*.db
