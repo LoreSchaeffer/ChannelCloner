@@ -43,6 +43,8 @@ public class Locale extends JsonConfig {
     public String invalidName;
     @SerializedName("template_not_registered")
     public String templateNotRegistered;
+    @SerializedName("already_registered")
+    public String alreadyRegistered;
 
 
     public String enabled;
@@ -68,11 +70,12 @@ public class Locale extends JsonConfig {
     public Locale init() {
         if (invalidCommand == null) invalidCommand = "Invalid command syntax!";
         if (insufficientPerms == null) insufficientPerms = "Insufficient permissions!";
-        if (insufficientBotPerms == null) insufficientBotPerms = "The bot must have Permission.MANAGE_PERMISSIONS on the channel explicitly in order to set permissions you don't already have!";
+        if (insufficientBotPerms == null) insufficientBotPerms = "The bot must have Permission.MANAGE_PERMISSIONS on the channel explicitly in order to set permissions it doesn't already have!";
         if (internalError == null) internalError = "Internal error: {error}.";
         if (notAudioChannel == null) notAudioChannel = "You must provide an Audio Channel, not a Text Channel.";
         if (invalidName == null) invalidName = "Invalid name! Name must be between 1 and 100 characters long.";
         if (templateNotRegistered == null) templateNotRegistered = "This template is not registered.";
+        if (alreadyRegistered == null) alreadyRegistered = "This template is already registered.";
 
         if (enabled == null) enabled = ":white_check_mark: Channel Cloner enabled in this server.";
         if (disabled == null) disabled = ":x: Channel Cloner disabled in this server.";

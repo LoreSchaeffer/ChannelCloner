@@ -132,6 +132,11 @@ public class EventListener extends ListenerAdapter {
             return;
         }
 
+        if (cc.db().isRegistered(channel) || (secondary != null && cc.db().isRegistered(secondary))) {
+            reply(event, locale.alreadyRegistered);
+            return;
+        }
+
         Database.Result result = cc.db().registerTemplate(channel, name, secondary);
 
         if (!result.isSuccess()) {
